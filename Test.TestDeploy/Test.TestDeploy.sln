@@ -7,6 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.TestDeploy.Orchestrati
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.TestDeploy.Schemas", "Test.TestDeploy.Schemas\Test.TestDeploy.Schemas.btproj", "{C2F5BEA0-4B44-4613-B61F-70DAD0885264}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bindings", "Bindings", "{92BBE638-C368-4D45-A6BA-AC210DED70AB}"
+	ProjectSection(SolutionItems) = preProject
+		..\Bindings\Test.TestDeploy.xml = ..\Bindings\Test.TestDeploy.xml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
