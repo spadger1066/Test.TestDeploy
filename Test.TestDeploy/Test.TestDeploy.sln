@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.TestDeploy.Schemas", "
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bindings", "Bindings", "{92BBE638-C368-4D45-A6BA-AC210DED70AB}"
 	ProjectSection(SolutionItems) = preProject
-		..\Bindings\Test.TestDeploy.xml = ..\Bindings\Test.TestDeploy.xml
+		Bindings\Test.TestDeploy.xml = Bindings\Test.TestDeploy.xml
 	EndProjectSection
 EndProject
 Global
