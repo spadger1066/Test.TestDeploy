@@ -110,7 +110,7 @@
           <SendPipeline xsi:nil="true" />
           <SendPipelineData xsi:nil="true" />
           <Enable>false</Enable>
-          <ReceiveHandler Name="BizTalkServerApplication" HostTrusted="false">
+          <ReceiveHandler Name="Rcv_x64_1_Random_H" HostTrusted="false">
             <TransportType Name="FILE" Capabilities="11" ConfigurationClsid="5e49e3a6-b4fc-4077-b44c-22f34a242fdb" />
           </ReceiveHandler>
         </ReceiveLocation>
