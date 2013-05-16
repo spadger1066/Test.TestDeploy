@@ -1,0 +1,231 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="09a5960f-ce91-44fa-90a1-54f294c79e03" LowerBound="1.1" HigherBound="50.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="Test.TestDeploy.Orchestrations" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="PortType" OID="c0bfa06e-6f31-499a-aa2f-8f6b6239c3a1" ParentLink="Module_PortType" LowerBound="12.1" HigherBound="19.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="ReceiveTestFilesType" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="44241e42-2980-4c5a-89d8-2d9bca9a8677" ParentLink="PortType_OperationDeclaration" LowerBound="14.1" HigherBound="18.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Receive" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="5fbc1af5-b7fd-4d36-b820-bfbfc84ff680" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="16.13" HigherBound="16.30">
+                    <om:Property Name="Ref" Value="Test.TestDeploy.Orchestrations.MsgInputMultiType" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="829bf020-0506-4923-ad91-d7d0fa845478" ParentLink="Module_PortType" LowerBound="19.1" HigherBound="26.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="SendTestFilesType" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="eb07698c-9b7e-4153-b282-6fe42b117b0f" ParentLink="PortType_OperationDeclaration" LowerBound="21.1" HigherBound="25.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Send" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="0f5d0e8e-71ce-4d68-970a-11fbbf6aabd5" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="23.13" HigherBound="23.31">
+                    <om:Property Name="Ref" Value="Test.TestDeploy.Orchestrations.MsgOutputMultiType" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="MultipartMessageType" OID="448b4482-671c-4db6-a329-04fd1268ba1f" ParentLink="Module_MessageType" LowerBound="4.1" HigherBound="8.1">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="MsgInputMultiType" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="PartDeclaration" OID="e768efa0-9c52-4f79-8dec-44bda3be975b" ParentLink="MultipartMessageType_PartDeclaration" LowerBound="6.1" HigherBound="7.1">
+                <om:Property Name="ClassName" Value="Test.TestDeploy.Schemas.schInputSchema" />
+                <om:Property Name="IsBodyPart" Value="True" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Body" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+        </om:Element>
+        <om:Element Type="MultipartMessageType" OID="d4c51daa-6b21-4fba-9d5c-4a567457ec7a" ParentLink="Module_MessageType" LowerBound="8.1" HigherBound="12.1">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="MsgOutputMultiType" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="PartDeclaration" OID="e26b67db-5cce-4a5a-bf13-31b4a2e70473" ParentLink="MultipartMessageType_PartDeclaration" LowerBound="10.1" HigherBound="11.1">
+                <om:Property Name="ClassName" Value="Test.TestDeploy.Schemas.schOutputSchema" />
+                <om:Property Name="IsBodyPart" Value="True" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Body" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+        </om:Element>
+        <om:Element Type="ServiceDeclaration" OID="a533ae91-4410-4626-a811-7d8f0a2d64a9" ParentLink="Module_ServiceDeclaration" LowerBound="26.1" HigherBound="49.1">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="orchProcessInput" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="ServiceBody" OID="e2b0136d-e372-4e55-bffe-162c23127dd8" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="Receive" OID="9a9b7e8f-2082-423f-9514-560d61e763c9" ParentLink="ServiceBody_Statement" LowerBound="37.1" HigherBound="39.1">
+                    <om:Property Name="Activate" Value="True" />
+                    <om:Property Name="PortName" Value="ReceiveTestFiles" />
+                    <om:Property Name="MessageName" Value="MsgInput" />
+                    <om:Property Name="OperationName" Value="Receive" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="MsgInput" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Construct" OID="87f99210-97b0-4966-8655-ea4783d7a54c" ParentLink="ServiceBody_Statement" LowerBound="39.1" HigherBound="45.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="MsgOutput" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="Transform" OID="5c7d36af-8a52-4392-9881-384dc741d659" ParentLink="ComplexStatement_Statement" LowerBound="42.1" HigherBound="44.1">
+                        <om:Property Name="ClassName" Value="Test.TestDeploy.Maps.TransformFromInputToOutput" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="TransformFromInputToOutput" />
+                        <om:Property Name="Signal" Value="False" />
+                        <om:Element Type="MessagePartRef" OID="edb6ee92-f94f-4794-8572-6d906680308a" ParentLink="Transform_InputMessagePartRef" LowerBound="43.95" HigherBound="43.108">
+                            <om:Property Name="MessageRef" Value="MsgInput" />
+                            <om:Property Name="PartRef" Value="Body" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_1" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                        <om:Element Type="MessagePartRef" OID="c4a4a875-d214-4013-89b6-e5ef9634cc99" ParentLink="Transform_OutputMessagePartRef" LowerBound="43.28" HigherBound="43.42">
+                            <om:Property Name="MessageRef" Value="MsgOutput" />
+                            <om:Property Name="PartRef" Value="Body" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_2" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="MessageRef" OID="b0d0c12e-91ed-417d-919c-d218eb10b833" ParentLink="Construct_MessageRef" LowerBound="40.23" HigherBound="40.32">
+                        <om:Property Name="Ref" Value="MsgOutput" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Send" OID="af6097dd-cbdb-406b-8c89-5d966f427726" ParentLink="ServiceBody_Statement" LowerBound="45.1" HigherBound="47.1">
+                    <om:Property Name="PortName" Value="SendTestFiles" />
+                    <om:Property Name="MessageName" Value="MsgOutput" />
+                    <om:Property Name="OperationName" Value="Send" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="MsgOutput" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="f876c1ed-fb4c-463a-b0e3-a407807ff048" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="29.1" HigherBound="31.1">
+                <om:Property Name="PortModifier" Value="Implements" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="-1" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="Test.TestDeploy.Orchestrations.ReceiveTestFilesType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="ReceiveTestFiles" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="0685aa4d-1731-48ae-bfe0-b1e10bfc18b7" ParentLink="PortDeclaration_CLRAttribute" LowerBound="29.1" HigherBound="30.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="091a17cd-dd58-4e73-b729-18bd6102b399" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="31.1" HigherBound="33.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Right" />
+                <om:Property Name="PortIndex" Value="18" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="Test.TestDeploy.Orchestrations.SendTestFilesType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="SendTestFiles" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="518a0831-062d-42df-8704-8dc405fa6c27" ParentLink="PortDeclaration_CLRAttribute" LowerBound="31.1" HigherBound="32.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="60f5a416-e39d-4730-9e10-645b1201dd51" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="33.1" HigherBound="34.1">
+                <om:Property Name="Type" Value="Test.TestDeploy.Orchestrations.MsgInputMultiType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="MsgInput" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="508483e3-fd40-40cf-b3f4-9922bd6924d2" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="34.1" HigherBound="35.1">
+                <om:Property Name="Type" Value="Test.TestDeploy.Orchestrations.MsgOutputMultiType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="MsgOutput" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module Test.TestDeploy.Orchestrations
+{
+    internal messagetype MsgInputMultiType
+    {
+        body Test.TestDeploy.Schemas.schInputSchema Body;
+    };
+    internal messagetype MsgOutputMultiType
+    {
+        body Test.TestDeploy.Schemas.schOutputSchema Body;
+    };
+    internal porttype ReceiveTestFilesType
+    {
+        oneway Receive
+        {
+            MsgInputMultiType
+        };
+    };
+    internal porttype SendTestFilesType
+    {
+        oneway Send
+        {
+            MsgOutputMultiType
+        };
+    };
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service orchProcessInput
+    {
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port implements ReceiveTestFilesType ReceiveTestFiles;
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port uses SendTestFilesType SendTestFiles;
+        message MsgInputMultiType MsgInput;
+        message MsgOutputMultiType MsgOutput;
+        body ()
+        {
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("9a9b7e8f-2082-423f-9514-560d61e763c9")]
+            activate receive (ReceiveTestFiles.Receive, MsgInput);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("87f99210-97b0-4966-8655-ea4783d7a54c")]
+            construct MsgOutput
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("5c7d36af-8a52-4392-9881-384dc741d659")]
+                transform (MsgOutput.Body) = Test.TestDeploy.Maps.TransformFromInputToOutput (MsgInput.Body);
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("af6097dd-cbdb-406b-8c89-5d966f427726")]
+            send (SendTestFiles.Send, MsgOutput);
+        }
+    }
+}
+
