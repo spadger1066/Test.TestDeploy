@@ -62,8 +62,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Map Include="TransformFromInputToOutput.btm">
-      <TypeName>TransformFromInputToOutput</TypeName>
+    <Map Include="mapTransformFromInputToOutput.btm">
+      <TypeName>mapTransformFromInputToOutput</TypeName>
       <Namespace>Test.TestDeploy.Maps</Namespace>
     </Map>
   </ItemGroup>

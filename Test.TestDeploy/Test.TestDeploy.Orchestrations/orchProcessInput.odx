@@ -94,18 +94,18 @@
                     <om:Property Name="Name" Value="MsgOutput" />
                     <om:Property Name="Signal" Value="True" />
                     <om:Element Type="Transform" OID="5c7d36af-8a52-4392-9881-384dc741d659" ParentLink="ComplexStatement_Statement" LowerBound="42.1" HigherBound="44.1">
-                        <om:Property Name="ClassName" Value="Test.TestDeploy.Maps.TransformFromInputToOutput" />
+                        <om:Property Name="ClassName" Value="Test.TestDeploy.Maps.mapTransformFromInputToOutput" />
                         <om:Property Name="ReportToAnalyst" Value="True" />
                         <om:Property Name="Name" Value="TransformFromInputToOutput" />
-                        <om:Property Name="Signal" Value="False" />
-                        <om:Element Type="MessagePartRef" OID="edb6ee92-f94f-4794-8572-6d906680308a" ParentLink="Transform_InputMessagePartRef" LowerBound="43.95" HigherBound="43.108">
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="MessagePartRef" OID="036257ff-9249-4a06-b2f5-58d658e8b01b" ParentLink="Transform_InputMessagePartRef" LowerBound="43.98" HigherBound="43.111">
                             <om:Property Name="MessageRef" Value="MsgInput" />
                             <om:Property Name="PartRef" Value="Body" />
                             <om:Property Name="ReportToAnalyst" Value="True" />
                             <om:Property Name="Name" Value="MessagePartReference_1" />
                             <om:Property Name="Signal" Value="False" />
                         </om:Element>
-                        <om:Element Type="MessagePartRef" OID="c4a4a875-d214-4013-89b6-e5ef9634cc99" ParentLink="Transform_OutputMessagePartRef" LowerBound="43.28" HigherBound="43.42">
+                        <om:Element Type="MessagePartRef" OID="c1d3c4e7-db6f-4755-957d-517732595f08" ParentLink="Transform_OutputMessagePartRef" LowerBound="43.28" HigherBound="43.42">
                             <om:Property Name="MessageRef" Value="MsgOutput" />
                             <om:Property Name="PartRef" Value="Body" />
                             <om:Property Name="ReportToAnalyst" Value="True" />
@@ -221,7 +221,7 @@ module Test.TestDeploy.Orchestrations
             construct MsgOutput
             {
                 [Microsoft.XLANGs.BaseTypes.DesignerPosition("5c7d36af-8a52-4392-9881-384dc741d659")]
-                transform (MsgOutput.Body) = Test.TestDeploy.Maps.TransformFromInputToOutput (MsgInput.Body);
+                transform (MsgOutput.Body) = Test.TestDeploy.Maps.mapTransformFromInputToOutput (MsgInput.Body);
             }
             [Microsoft.XLANGs.BaseTypes.DesignerPosition("af6097dd-cbdb-406b-8c89-5d966f427726")]
             send (SendTestFiles.Send, MsgOutput);
