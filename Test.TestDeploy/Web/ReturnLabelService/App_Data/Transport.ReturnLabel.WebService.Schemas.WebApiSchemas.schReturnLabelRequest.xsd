@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:b="http://schemas.microsoft.com/BizTalk/2003" xmlns="http://Transport.ReturnLabel.WebService.Schemas.ReturnLabelRequest" targetNamespace="http://Transport.ReturnLabel.WebService.Schemas.ReturnLabelRequest" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="LabelRequest">
+    <xs:annotation>
+      <xs:appinfo />
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="CustomerId" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="OrderDate" type="xs:dateTime" />
+        <xs:element name="Sender">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="1" maxOccurs="1" name="Name" type="xs:string" />
+              <xs:element minOccurs="1" maxOccurs="1" name="PostalCode" type="xs:string" />
+              <xs:element minOccurs="1" maxOccurs="1" name="City" type="xs:string" />
+              <xs:element minOccurs="0" maxOccurs="1" name="StateOrRegion" type="xs:string" />
+              <xs:element minOccurs="1" maxOccurs="1" name="CountryCode" type="xs:string" />
+              <xs:element minOccurs="1" maxOccurs="1" name="Street" type="xs:string" />
+              <xs:element minOccurs="0" maxOccurs="2" name="AddressLine" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Recipient">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="1" maxOccurs="1" name="Id" type="xs:string" />
+              <xs:element minOccurs="1" maxOccurs="1" name="Name" type="xs:string" />
+              <xs:element minOccurs="1" maxOccurs="1" name="PostalCode" type="xs:string" />
+              <xs:element minOccurs="1" maxOccurs="1" name="City" type="xs:string" />
+              <xs:element minOccurs="1" maxOccurs="1" name="CountryCode" type="xs:string" />
+              <xs:element minOccurs="1" maxOccurs="1" name="Street" type="xs:string" />
+              <xs:element minOccurs="0" maxOccurs="2" name="AddressLine" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="1" maxOccurs="1" name="Shipment">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PackageId" type="xs:string" />
+              <xs:element minOccurs="0" maxOccurs="1" name="ShipmentId" type="xs:string" />
+              <xs:element minOccurs="0" maxOccurs="1" name="CustomerReference" type="xs:string" />
+              <xs:element minOccurs="1" maxOccurs="1" name="ProductCode" type="xs:string" />
+              <xs:element minOccurs="0" maxOccurs="1" name="Weight" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
