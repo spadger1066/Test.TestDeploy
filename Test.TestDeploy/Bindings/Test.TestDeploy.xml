@@ -115,7 +115,7 @@
 			<Description>LATE-BOUND Test receive</Description>
 			<ReceiveLocations>
 				<ReceiveLocation Name="TestDeploy.Test.Test.ReceiveTestFile.Xml">
-					<Description xsi:nil="true" />
+					<Description>LATE-BOUND Test receive</Description>
 					<!-- #if  GetProperty("_environment_name") =="Prod"  -->
 					<Address>\\p-133-220-009\Biztalk\${_environment_name}\TestDeploy\In\*.xml</Address>
 
