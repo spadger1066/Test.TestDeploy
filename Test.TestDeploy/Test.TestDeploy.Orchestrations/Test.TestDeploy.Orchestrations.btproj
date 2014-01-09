@@ -68,9 +68,9 @@
     </XLang>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Test.TestDeploy.Maps\Test.TestDeploy.Maps.btproj">
+    <ProjectReference Include="..\Test.TestDeploy.Maps\Test.TestDeploy.Transforms.csproj">
       <Project>{2EC88FD0-825A-4E63-AE1F-C50DEDBD95C6}</Project>
-      <Name>Test.TestDeploy.Maps</Name>
+      <Name>Test.TestDeploy.Transforms</Name>
     </ProjectReference>
     <ProjectReference Include="..\Test.TestDeploy.Schemas\Test.TestDeploy.Schemas.btproj">
       <Project>{C2F5BEA0-4B44-4613-B61F-70DAD0885264}</Project>
