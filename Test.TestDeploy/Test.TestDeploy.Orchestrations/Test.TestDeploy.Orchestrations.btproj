@@ -68,7 +68,7 @@
     </XLang>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Test.TestDeploy.Maps\Test.TestDeploy.Transforms.csproj">
+    <ProjectReference Include="..\Test.TestDeploy.Maps\Test.TestDeploy.Transforms.btproj">
       <Project>{2EC88FD0-825A-4E63-AE1F-C50DEDBD95C6}</Project>
       <Name>Test.TestDeploy.Transforms</Name>
     </ProjectReference>
