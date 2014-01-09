@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.TestDeploy.Transforms", "Test.TestDeploy.Maps\Test.TestDeploy.Transforms.btproj", "{2EC88FD0-825A-4E63-AE1F-C50DEDBD95C6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.TestDeploy.Transforms", "Test.TestDeploy.Transforms\Test.TestDeploy.Transforms.btproj", "{2EC88FD0-825A-4E63-AE1F-C50DEDBD95C6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.TestDeploy.Orchestrations", "Test.TestDeploy.Orchestrations\Test.TestDeploy.Orchestrations.btproj", "{69993ABC-273C-40B2-ACF8-CCBF636D4366}"
 EndProject
