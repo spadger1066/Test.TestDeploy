@@ -68,7 +68,7 @@
       <TransmitPipeline Name="Microsoft.BizTalk.DefaultPipelines.PassThruTransmit" FullyQualifiedName="Microsoft.BizTalk.DefaultPipelines.PassThruTransmit, Microsoft.BizTalk.DefaultPipelines, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Type="2" TrackingOption="None" Description="" />
       <PrimaryTransport>
 		  <!-- #if  GetProperty("_environment_name") =="Prod"  -->
-        <Address>\\p-133-220-009\Biztalk\EAI\${_environment_name}\TestDeploy\Out\%MessageID%.xml</Address>
+        <Address>\\p-133-220-009\Biztalk\${_environment_name}\TestDeploy\Out\%MessageID%.xml</Address>
 		  <!-- #else -->
 		  <Address>\\p-133-220-009\Biztalk\EAI\${_environment_name}\TestDeploy\Out\%MessageID%.xml</Address>
 		  <!-- #endif -->
@@ -117,7 +117,7 @@
         <ReceiveLocation Name="TestDeploy.Test.ReceiveTestFile.Xml">
           <Description xsi:nil="true" />
 			<!-- #if  GetProperty("_environment_name") =="Prod"  -->
-          <Address>\\p-133-220-009\Biztalk\EAI\${_environment_name}\TestDeploy\In\*.xml</Address>
+          <Address>\\p-133-220-009\Biztalk\${_environment_name}\TestDeploy\In\*.xml</Address>
           
 			<!-- #else -->
 			<Address>\\p-133-220-009\Biztalk\EAI\${_environment_name}\TestDeploy\In\*.xml</Address>
