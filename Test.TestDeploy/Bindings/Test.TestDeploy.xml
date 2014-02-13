@@ -64,7 +64,7 @@
 	</ModuleRefCollection>
 	<SendPortCollection>
 		<SendPort Name="TestDeploy.Test.Test.SendTestFile.XML" IsStatic="true" IsTwoWay="false" BindingOption="1">
-			<Description>LATE-BOUND Test send</Description>
+			<Description>Error LATE-BOUND Test send</Description>
 			<TransmitPipeline Name="Microsoft.BizTalk.DefaultPipelines.PassThruTransmit" FullyQualifiedName="Microsoft.BizTalk.DefaultPipelines.PassThruTransmit, Microsoft.BizTalk.DefaultPipelines, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Type="2" TrackingOption="None" Description="" />
 			<PrimaryTransport>
 				<!-- #if  GetProperty("_environment_name") =="Prod"  -->
