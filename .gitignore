@@ -27,7 +27,7 @@ _ReSharper*/
 *.btm.cs
 *.xsd.cs
 *.oxd.cs
-*.btproj.user
 *.btp.cs
-*.gpState
-*.ps1
+*.btproj.user
+*.gpstate
+~$*.docx
