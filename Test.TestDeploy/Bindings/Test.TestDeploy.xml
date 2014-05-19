@@ -85,7 +85,7 @@
 			</SendPipelineData>
 			<PrimaryTransport>
 				<!-- #if  GetProperty("_environment_name") =="Prod"  -->
-				<Address/>
+				<Address>\\p-133-220-009\Biztalk\TestDeploy\Out\%MessageID%.xml</Address>
 				<!-- #else -->
 				<Address>\\p-133-220-009\Biztalk\EAI\${_environment_name}\TestDeploy\Out\%MessageID%.xml</Address>
 				<!-- #endif -->
