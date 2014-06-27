@@ -85,9 +85,9 @@
 			</SendPipelineData>
 			<PrimaryTransport>
 				<!-- #if  GetProperty("_environment_name") =="Prod"  -->
-				<Address>${MBCommonSmbPath\TestDeploy\Out\%MessageID%.xml</Address>
+				<Address>${MBCommonSmbPath}\TestDeploy\Out\%MessageID%.xml</Address>
 				<!-- #else -->
-				<Address>${MBCommonSmbPath\EAI\${_environment_name}\TestDeploy\Out\%MessageID%.xml</Address>
+				<Address>${MBCommonSmbPath}\EAI\${_environment_name}\TestDeploy\Out\%MessageID%.xml</Address>
 				<!-- #endif -->
 				<TransportType Name="FILE" Capabilities="11" ConfigurationClsid="5e49e3a6-b4fc-4077-b44c-22f34a242fdb" />
 				<TransportTypeData>&lt;CustomProps&gt;&lt;UseTempFileOnWrite vt="11"&gt;0&lt;/UseTempFileOnWrite&gt;&lt;CopyMode vt="19"&gt;1&lt;/CopyMode&gt;&lt;FileName vt="8"&gt;%MessageID%.xml&lt;/FileName&gt;&lt;AllowCacheOnWrite vt="11"&gt;0&lt;/AllowCacheOnWrite&gt;&lt;/CustomProps&gt;</TransportTypeData>
@@ -134,9 +134,9 @@
 				<ReceiveLocation Name="TestDeploy.Test.Test.ReceiveTestFile.Xml">
 					<Description>LATE-BOUND Test receive</Description>
 					<!-- #if  GetProperty("_environment_name") =="Prod"  -->
-					<Address>${MBCommonSmbPath\TestDeploy\In\*.xml</Address>
+					<Address>${MBCommonSmbPath}\TestDeploy\In\*.xml</Address>
 					<!-- #else -->
-					<Address>${MBCommonSmbPath\EAI\${_environment_name}\TestDeploy\In\*.xml</Address>
+					<Address>${MBCommonSmbPath}\EAI\${_environment_name}\TestDeploy\In\*.xml</Address>
 					<!-- #endif -->
 					<PublicAddress />
 					<Primary>true</Primary>
@@ -165,7 +165,7 @@
 										&lt;/Component&gt;
 										&lt;Component Name=&quot;Bring.Common.Components.Archive.Archive&quot;&gt;
 											&lt;Properties&gt;
-												&lt;ArchivePath vt=&quot;8&quot;&gt;${MBCommonSmbPath\BigLogger&lt;/ArchivePath&gt;
+												&lt;ArchivePath vt=&quot;8&quot;&gt;${BigLoggerPath}&lt;/ArchivePath&gt;
 											&lt;/Properties&gt;
 										&lt;/Component&gt;
 									&lt;/Components&gt;
@@ -195,7 +195,7 @@
 										&lt;/Component&gt;
 										&lt;Component Name=&quot;Bring.Common.Components.Archive.Archive&quot;&gt;
 											&lt;Properties&gt;
-												&lt;ArchivePath vt=&quot;8&quot;&gt;${MBCommonSmbPath\EAI\${_environment_name}\BigLogger&lt;/ArchivePath&gt;
+												&lt;ArchivePath vt=&quot;8&quot;&gt;${BigLoggerPath}&lt;/ArchivePath&gt;
 											&lt;/Properties&gt;
 										&lt;/Component&gt;
 									&lt;/Components&gt;
