@@ -60,6 +60,10 @@
     <Reference Include="Microsoft.XLANGs.BaseTypes">
       <Name>Microsoft.XLANGs.BaseTypes</Name>
     </Reference>
+    <Reference Include="Test.Common.Schemas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=e83d1063801d38d6, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Test.Common\Test.Common\Test.Common.Schemas\bin\Debug\Test.Common.Schemas.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <XLang Include="orchProcessInput.odx">
