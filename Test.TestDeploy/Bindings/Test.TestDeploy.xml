@@ -65,7 +65,7 @@
 	<SendPortCollection>
 		<SendPort Name="TestDeploy.Test.Test.SendTestFile.XML" IsStatic="true" IsTwoWay="false" BindingOption="1">
 			<Description>LATE-BOUND Test send</Description>
-			<TransmitPipeline Name="Bring.Common.Pipelines.BAM.sndPassthrough" FullyQualifiedName="Bring.Common.Pipelines.BAM.sndPassthrough, Bring.Common.Pipelines.BAM, Version=1.0.0.0, Culture=neutral, PublicKeyToken=e83d1063801d38d6" Type="2" TrackingOption="ServiceStartEnd MessageSendReceive PipelineEvents" />
+			<TransmitPipeline Name="Bring.Common.Pipelines.BAM.sndPassthrough2" FullyQualifiedName="Bring.Common.Pipelines.BAM.sndPassthrough, Bring.Common.Pipelines.BAM, Version=1.0.0.0, Culture=neutral, PublicKeyToken=e83d1063801d38d6" Type="2" TrackingOption="ServiceStartEnd MessageSendReceive PipelineEvents" />
 			<SendPipelineData>&lt;Root xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
 				&lt;Stages&gt;
 				&lt;Stage CategoryId=&quot;9d0e4108-4cce-4536-83fa-4a5040674ad6&quot;&gt;
