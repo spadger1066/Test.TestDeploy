@@ -1,2 +1,2 @@
 @BizTalkReferences
-Test.Common
+Test.Common,Bring.Common
