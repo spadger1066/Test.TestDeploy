@@ -1,16 +1,18 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bindings", "Bindings", "{92BBE638-C368-4D45-A6BA-AC210DED70AB}"
+	ProjectSection(SolutionItems) = preProject
+		Bindings\Test.TestDeploy.xml = Bindings\Test.TestDeploy.xml
+	EndProjectSection
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.TestDeploy.Transforms", "Test.TestDeploy.Transforms\Test.TestDeploy.Transforms.btproj", "{2EC88FD0-825A-4E63-AE1F-C50DEDBD95C6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.TestDeploy.Orchestrations", "Test.TestDeploy.Orchestrations\Test.TestDeploy.Orchestrations.btproj", "{69993ABC-273C-40B2-ACF8-CCBF636D4366}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.TestDeploy.Schemas", "Test.TestDeploy.Schemas\Test.TestDeploy.Schemas.btproj", "{C2F5BEA0-4B44-4613-B61F-70DAD0885264}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bindings", "Bindings", "{92BBE638-C368-4D45-A6BA-AC210DED70AB}"
-	ProjectSection(SolutionItems) = preProject
-		Bindings\Test.TestDeploy.xml = Bindings\Test.TestDeploy.xml
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
