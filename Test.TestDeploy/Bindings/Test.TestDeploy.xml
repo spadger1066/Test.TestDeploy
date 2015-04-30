@@ -24,7 +24,7 @@
 		<ModuleRef Name="Test.TestDeploy.Orchestrations" Version="1.0.0.0" Culture="neutral" PublicKeyToken="e83d1063801d38d6" FullName="Test.TestDeploy.Orchestrations, Version=1.0.0.0, Culture=neutral, PublicKeyToken=e83d1063801d38d6">
 			<Services>
 				<!-- #if  GetProperty("_environment_name") =="Prod"  -->
-				<Service Name="Test.TestDeploy.Orchestrations.orchProcessInput" State="Started" TrackingOption="None">
+				<Service Name="Test.TestDeploy.Orchestrations.orchprePostProcessInput" State="Started" TrackingOption="None">
 					<Ports>
 						<Port Name="ReceiveTestFiles" Modifier="2" BindingOption="1">
 							<SendPortRef xsi:nil="true" />
@@ -41,7 +41,7 @@
 					<Host Name="Orc_x64_1_Random_H" NTGroupName="WIN-U69N377R0TL\BizTalk Application Users" Type="1" Trusted="false" />
 				</Service>
 				<!-- #else -->
-				<Service Name="Test.TestDeploy.Orchestrations.orchProcessInput" State="Started" TrackingOption="ServiceStartEnd MessageSendReceive OrchestrationEvents">
+				<Service Name="Test.TestDeploy.Orchestrations.orchprePostProcessInput" State="Started" TrackingOption="ServiceStartEnd MessageSendReceive OrchestrationEvents">
 					<Ports>
 						<Port Name="ReceiveTestFiles" Modifier="2" BindingOption="1">
 							<SendPortRef xsi:nil="true" />
