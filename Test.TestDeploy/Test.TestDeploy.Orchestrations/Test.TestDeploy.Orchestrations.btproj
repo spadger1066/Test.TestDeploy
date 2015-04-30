@@ -94,9 +94,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <XLang Include="orchProcessInput.odx">
+    <XLang Include="orchprePostProcessInput.odx">
       <TypeName>orchProcessInput</TypeName>
       <Namespace>Test.TestDeploy.Orchestrations</Namespace>
+      <SubType>Task</SubType>
     </XLang>
   </ItemGroup>
   <ItemGroup>
