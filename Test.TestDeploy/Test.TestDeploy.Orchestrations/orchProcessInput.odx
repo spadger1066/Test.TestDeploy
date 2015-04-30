@@ -2,7 +2,7 @@
 #error Do not define __DESIGNER_DATA.
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
-    <om:Element Type="Module" OID="09a5960f-ce91-44fa-90a1-54f294c79e03" LowerBound="1.1" HigherBound="50.1">
+    <om:Element Type="Module" OID="09a5960f-ce91-44fa-90a1-54f294c79e03" LowerBound="1.1" HigherBound="79.1">
         <om:Property Name="ReportToAnalyst" Value="True" />
         <om:Property Name="Name" Value="Test.TestDeploy.Orchestrations" />
         <om:Property Name="Signal" Value="False" />
@@ -70,16 +70,47 @@
                 <om:Property Name="Signal" Value="True" />
             </om:Element>
         </om:Element>
-        <om:Element Type="ServiceDeclaration" OID="a533ae91-4410-4626-a811-7d8f0a2d64a9" ParentLink="Module_ServiceDeclaration" LowerBound="26.1" HigherBound="49.1">
+        <om:Element Type="ServiceDeclaration" OID="a533ae91-4410-4626-a811-7d8f0a2d64a9" ParentLink="Module_ServiceDeclaration" LowerBound="26.1" HigherBound="78.1">
             <om:Property Name="InitializedTransactionType" Value="False" />
             <om:Property Name="IsInvokable" Value="False" />
             <om:Property Name="TypeModifier" Value="Internal" />
             <om:Property Name="ReportToAnalyst" Value="True" />
             <om:Property Name="Name" Value="orchProcessInput" />
             <om:Property Name="Signal" Value="False" />
+            <om:Element Type="VariableDeclaration" OID="f78adea0-1985-477f-8ddd-c6c685970e84" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="35.1" HigherBound="36.1">
+                <om:Property Name="InitialValue" Value="&quot;BAM_MF_Orch&quot;" />
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="ActivityView" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="95fc1ca7-9d02-43cb-8180-9fe73f47612e" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="36.1" HigherBound="37.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="ActivityGUID" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="60f5a416-e39d-4730-9e10-645b1201dd51" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="33.1" HigherBound="34.1">
+                <om:Property Name="Type" Value="Test.TestDeploy.Orchestrations.MsgInputMultiType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="MsgInput" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="508483e3-fd40-40cf-b3f4-9922bd6924d2" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="34.1" HigherBound="35.1">
+                <om:Property Name="Type" Value="Test.TestDeploy.Orchestrations.MsgOutputMultiType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="MsgOutput" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
             <om:Element Type="ServiceBody" OID="e2b0136d-e372-4e55-bffe-162c23127dd8" ParentLink="ServiceDeclaration_ServiceBody">
                 <om:Property Name="Signal" Value="False" />
-                <om:Element Type="Receive" OID="9a9b7e8f-2082-423f-9514-560d61e763c9" ParentLink="ServiceBody_Statement" LowerBound="37.1" HigherBound="39.1">
+                <om:Element Type="Receive" OID="9a9b7e8f-2082-423f-9514-560d61e763c9" ParentLink="ServiceBody_Statement" LowerBound="39.1" HigherBound="43.1">
                     <om:Property Name="Activate" Value="True" />
                     <om:Property Name="PortName" Value="ReceiveTestFiles" />
                     <om:Property Name="MessageName" Value="MsgInput" />
@@ -89,23 +120,29 @@
                     <om:Property Name="Name" Value="MsgInput" />
                     <om:Property Name="Signal" Value="True" />
                 </om:Element>
-                <om:Element Type="Construct" OID="87f99210-97b0-4966-8655-ea4783d7a54c" ParentLink="ServiceBody_Statement" LowerBound="39.1" HigherBound="45.1">
+                <om:Element Type="VariableAssignment" OID="24ae2533-748f-46d5-88a8-c0815c0e16ee" ParentLink="ServiceBody_Statement" LowerBound="43.1" HigherBound="56.1">
+                    <om:Property Name="Expression" Value="ActivityGUID = System.Convert.ToString(System.Guid.NewGuid());&#xD;&#xA;Microsoft.BizTalk.Bam.EventObservation.OrchestrationEventStream.BeginActivity(&#xD;&#xA;    ActivityView,      ActivityGUID&#xD;&#xA;);&#xD;&#xA;&#xD;&#xA;Microsoft.BizTalk.Bam.EventObservation.OrchestrationEventStream.UpdateActivity(&#xD;&#xA;    ActivityView,      ActivityGUID,&#xD;&#xA;    &quot;StartTime&quot;,        System.DateTime.UtcNow,&#xD;&#xA;    &quot;Domain&quot;,           &quot;Test&quot;,&#xD;&#xA;    &quot;Orchestration&quot;,    &quot;orcPostSendTrackingApiRequest&quot;,&#xD;&#xA;    &quot;ReceiveActivity&quot;,  MsgInput(Bring.Common.Schemas.BAM.ActivityId)&#xD;&#xA;);&#xD;&#xA;" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Std MF_BAM" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="Construct" OID="87f99210-97b0-4966-8655-ea4783d7a54c" ParentLink="ServiceBody_Statement" LowerBound="56.1" HigherBound="62.1">
                     <om:Property Name="ReportToAnalyst" Value="True" />
                     <om:Property Name="Name" Value="MsgOutput" />
                     <om:Property Name="Signal" Value="True" />
-                    <om:Element Type="Transform" OID="5c7d36af-8a52-4392-9881-384dc741d659" ParentLink="ComplexStatement_Statement" LowerBound="42.1" HigherBound="44.1">
+                    <om:Element Type="Transform" OID="5c7d36af-8a52-4392-9881-384dc741d659" ParentLink="ComplexStatement_Statement" LowerBound="59.1" HigherBound="61.1">
                         <om:Property Name="ClassName" Value="Test.TestDeploy.Transforms.mapTransformFromInputToOutput" />
                         <om:Property Name="ReportToAnalyst" Value="True" />
                         <om:Property Name="Name" Value="TransformFromInputToOutput" />
                         <om:Property Name="Signal" Value="True" />
-                        <om:Element Type="MessagePartRef" OID="e97e4528-7d89-4e45-9f45-b9f0a660e7f5" ParentLink="Transform_InputMessagePartRef" LowerBound="43.104" HigherBound="43.117">
+                        <om:Element Type="MessagePartRef" OID="e97e4528-7d89-4e45-9f45-b9f0a660e7f5" ParentLink="Transform_InputMessagePartRef" LowerBound="60.104" HigherBound="60.117">
                             <om:Property Name="MessageRef" Value="MsgInput" />
                             <om:Property Name="PartRef" Value="Body" />
                             <om:Property Name="ReportToAnalyst" Value="True" />
                             <om:Property Name="Name" Value="MessagePartReference_1" />
                             <om:Property Name="Signal" Value="False" />
                         </om:Element>
-                        <om:Element Type="MessagePartRef" OID="2176c6d6-b8e4-432b-9b19-2e896c015f84" ParentLink="Transform_OutputMessagePartRef" LowerBound="43.28" HigherBound="43.42">
+                        <om:Element Type="MessagePartRef" OID="2176c6d6-b8e4-432b-9b19-2e896c015f84" ParentLink="Transform_OutputMessagePartRef" LowerBound="60.28" HigherBound="60.42">
                             <om:Property Name="MessageRef" Value="MsgOutput" />
                             <om:Property Name="PartRef" Value="Body" />
                             <om:Property Name="ReportToAnalyst" Value="True" />
@@ -113,19 +150,25 @@
                             <om:Property Name="Signal" Value="False" />
                         </om:Element>
                     </om:Element>
-                    <om:Element Type="MessageRef" OID="b0d0c12e-91ed-417d-919c-d218eb10b833" ParentLink="Construct_MessageRef" LowerBound="40.23" HigherBound="40.32">
+                    <om:Element Type="MessageRef" OID="b0d0c12e-91ed-417d-919c-d218eb10b833" ParentLink="Construct_MessageRef" LowerBound="57.23" HigherBound="57.32">
                         <om:Property Name="Ref" Value="MsgOutput" />
                         <om:Property Name="ReportToAnalyst" Value="True" />
                         <om:Property Name="Signal" Value="False" />
                     </om:Element>
                 </om:Element>
-                <om:Element Type="Send" OID="af6097dd-cbdb-406b-8c89-5d966f427726" ParentLink="ServiceBody_Statement" LowerBound="45.1" HigherBound="47.1">
+                <om:Element Type="Send" OID="af6097dd-cbdb-406b-8c89-5d966f427726" ParentLink="ServiceBody_Statement" LowerBound="62.1" HigherBound="64.1">
                     <om:Property Name="PortName" Value="SendTestFiles" />
                     <om:Property Name="MessageName" Value="MsgOutput" />
                     <om:Property Name="OperationName" Value="Send" />
                     <om:Property Name="OperationMessageName" Value="Request" />
                     <om:Property Name="ReportToAnalyst" Value="True" />
                     <om:Property Name="Name" Value="MsgOutput" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="VariableAssignment" OID="5d81fee6-ea86-4178-bdc6-19db97502448" ParentLink="ServiceBody_Statement" LowerBound="64.1" HigherBound="76.1">
+                    <om:Property Name="Expression" Value="// End MF-BAM&#xD;&#xA;&#xD;&#xA;Microsoft.BizTalk.Bam.EventObservation.OrchestrationEventStream.UpdateActivity(&#xD;&#xA;    ActivityView,      ActivityGUID,&#xD;&#xA;    &quot;Status&quot;,           &quot;Orchestration completed&quot;,&#xD;&#xA;    &quot;EndTime&quot;,          System.DateTime.UtcNow&#xD;&#xA;);&#xD;&#xA;Microsoft.BizTalk.Bam.EventObservation.OrchestrationEventStream.EndActivity(&#xD;&#xA;    ActivityView,      ActivityGUID&#xD;&#xA;);&#xD;&#xA;&#xD;&#xA;" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="End BAM" />
                     <om:Property Name="Signal" Value="True" />
                 </om:Element>
             </om:Element>
@@ -160,20 +203,6 @@
                 <om:Element Type="LogicalBindingAttribute" OID="518a0831-062d-42df-8704-8dc405fa6c27" ParentLink="PortDeclaration_CLRAttribute" LowerBound="31.1" HigherBound="32.1">
                     <om:Property Name="Signal" Value="False" />
                 </om:Element>
-            </om:Element>
-            <om:Element Type="MessageDeclaration" OID="60f5a416-e39d-4730-9e10-645b1201dd51" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="33.1" HigherBound="34.1">
-                <om:Property Name="Type" Value="Test.TestDeploy.Orchestrations.MsgInputMultiType" />
-                <om:Property Name="ParamDirection" Value="In" />
-                <om:Property Name="ReportToAnalyst" Value="True" />
-                <om:Property Name="Name" Value="MsgInput" />
-                <om:Property Name="Signal" Value="True" />
-            </om:Element>
-            <om:Element Type="MessageDeclaration" OID="508483e3-fd40-40cf-b3f4-9922bd6924d2" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="34.1" HigherBound="35.1">
-                <om:Property Name="Type" Value="Test.TestDeploy.Orchestrations.MsgOutputMultiType" />
-                <om:Property Name="ParamDirection" Value="In" />
-                <om:Property Name="ReportToAnalyst" Value="True" />
-                <om:Property Name="Name" Value="MsgOutput" />
-                <om:Property Name="Signal" Value="True" />
             </om:Element>
         </om:Element>
     </om:Element>
@@ -213,10 +242,27 @@ module Test.TestDeploy.Orchestrations
         port uses SendTestFilesType SendTestFiles;
         message MsgInputMultiType MsgInput;
         message MsgOutputMultiType MsgOutput;
+        System.String ActivityView;
+        System.String ActivityGUID;
         body ()
         {
             [Microsoft.XLANGs.BaseTypes.DesignerPosition("9a9b7e8f-2082-423f-9514-560d61e763c9")]
             activate receive (ReceiveTestFiles.Receive, MsgInput);
+            ActivityView = "BAM_MF_Orch";
+            ActivityGUID = "";
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("24ae2533-748f-46d5-88a8-c0815c0e16ee")]
+            ActivityGUID = System.Convert.ToString(System.Guid.NewGuid());
+            Microsoft.BizTalk.Bam.EventObservation.OrchestrationEventStream.BeginActivity(
+                ActivityView,      ActivityGUID
+            );
+            
+            Microsoft.BizTalk.Bam.EventObservation.OrchestrationEventStream.UpdateActivity(
+                ActivityView,      ActivityGUID,
+                "StartTime",        System.DateTime.UtcNow,
+                "Domain",           "Test",
+                "Orchestration",    "orcPostSendTrackingApiRequest",
+                "ReceiveActivity",  MsgInput(Bring.Common.Schemas.BAM.ActivityId)
+            );
             [Microsoft.XLANGs.BaseTypes.DesignerPosition("87f99210-97b0-4966-8655-ea4783d7a54c")]
             construct MsgOutput
             {
@@ -225,6 +271,18 @@ module Test.TestDeploy.Orchestrations
             }
             [Microsoft.XLANGs.BaseTypes.DesignerPosition("af6097dd-cbdb-406b-8c89-5d966f427726")]
             send (SendTestFiles.Send, MsgOutput);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("5d81fee6-ea86-4178-bdc6-19db97502448")]
+            // End MF-BAM
+            
+            Microsoft.BizTalk.Bam.EventObservation.OrchestrationEventStream.UpdateActivity(
+                ActivityView,      ActivityGUID,
+                "Status",           "Orchestration completed",
+                "EndTime",          System.DateTime.UtcNow
+            );
+            Microsoft.BizTalk.Bam.EventObservation.OrchestrationEventStream.EndActivity(
+                ActivityView,      ActivityGUID
+            );
+            
         }
     }
 }

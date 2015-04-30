@@ -56,6 +56,14 @@
     <EnableUnitTesting>True</EnableUnitTesting>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bring.Common.Schemas.BAM, Version=1.0.0.0, Culture=neutral, PublicKeyToken=e83d1063801d38d6, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Bring.Common\Bring.Common\Bring.Common.Schemas.BAM\bin\Debug\Bring.Common.Schemas.BAM.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.BizTalk.Bam.XLANGs, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\assembly\GAC_MSIL\Microsoft.BizTalk.Bam.XLANGs\3.0.1.0__31bf3856ad364e35\Microsoft.BizTalk.Bam.XLANGs.dll</HintPath>
+    </Reference>
     <Reference Include="System">
       <Name>System</Name>
     </Reference>
