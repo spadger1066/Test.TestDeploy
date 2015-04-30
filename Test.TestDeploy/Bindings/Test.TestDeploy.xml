@@ -73,8 +73,8 @@
 				&lt;Component Name=&quot;Bring.Common.Components.BAM.BAMSend&quot;&gt;
 				&lt;Properties&gt;
 				&lt;MsgBoxDbConString vt=&quot;8&quot;&gt;${MsgBoxDbConString}&lt;/MsgBoxDbConString&gt;
-				&lt;SendPort vt=&quot;8&quot;&gt;TestSend&lt;/SendPort&gt;
-				&lt;System vt=&quot;8&quot;&gt;Test&lt;/System&gt;
+				&lt;SendPort vt=&quot;8&quot;&gt;TestDeploy.Test.Test.SendTestFile.XML&lt;/SendPort&gt;
+				&lt;System vt=&quot;8&quot;&gt;Internal.Test&lt;/System&gt;
 				&lt;/Properties&gt;
 				&lt;/Component&gt;
 				&lt;/Components&gt;
@@ -155,9 +155,10 @@
 						&lt;Components&gt;
 						&lt;Component Name=&quot;Bring.Common.Components.BAM.BAM&quot;&gt;
 						&lt;Properties&gt;
+						&lt;EnableReinsert vt=&quot;11&quot;&gt;0&lt;/EnableReinsert&gt;
 						&lt;MsgBoxDbConString vt=&quot;8&quot;&gt;${MsgBoxDbConString}&lt;/MsgBoxDbConString&gt;
 						&lt;PostfixFilename vt=&quot;11&quot;&gt;0&lt;/PostfixFilename&gt;
-						&lt;SystemName vt=&quot;8&quot;&gt;Test&lt;/SystemName&gt;
+						&lt;SystemName vt=&quot;8&quot;&gt;Internal.Test&lt;/SystemName&gt;
 						&lt;/Properties&gt;
 						&lt;/Component&gt;
 						&lt;Component Name=&quot;Bring.Common.Components.Archive.Archive&quot;&gt;
@@ -183,9 +184,10 @@
 						&lt;Components&gt;
 						&lt;Component Name=&quot;Bring.Common.Components.BAM.BAM&quot;&gt;
 						&lt;Properties&gt;
+						&lt;EnableReinsert vt=&quot;11&quot;&gt;0&lt;/EnableReinsert&gt;
 						&lt;MsgBoxDbConString vt=&quot;8&quot;&gt;${MsgBoxDbConString}&lt;/MsgBoxDbConString&gt;
 						&lt;PostfixFilename vt=&quot;11&quot;&gt;0&lt;/PostfixFilename&gt;
-						&lt;SystemName vt=&quot;8&quot;&gt;Test&lt;/SystemName&gt;
+						&lt;SystemName vt=&quot;8&quot;&gt;Internal.Test&lt;/SystemName&gt;
 						&lt;/Properties&gt;
 						&lt;/Component&gt;
 						&lt;Component Name=&quot;Bring.Common.Components.Archive.Archive&quot;&gt;
